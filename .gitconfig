@@ -1,0 +1,24 @@
+[user]
+	name = Tim Goodwin
+	email = tgoodwin@graphiq.com
+[branch "master"]
+	rebase = true
+[branch]
+	autosetuprebase = always
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+
+[alias]
+    co = checkout
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    le = log --oneline --decorate
+    log = log -- decorate
+    f = "!git ls-files | grep -i"
+    b = branch
+    co = checkout
+
